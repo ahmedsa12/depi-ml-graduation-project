@@ -280,12 +280,10 @@ closed-fist poses). Figures and the full per-class report are in [`documentation
 
 | Member | Role |
 |---|---|
-| **Ahmed Abd El-Ghafar Slama** | ML / model design · notebook |
-| **Ahmed Hassan Mohamed** | Backend / API |
-| **Yara Ahmed Mohamed Abdelall** | Frontend / UX |
-| **Salwa Wael Mohammed Elkordy** | Data / evaluation · documentation |
-
-**Collaboration:** Discord · WhatsApp · GitHub · Google Colab.
+| **Ahmed Abd El-Ghafar Salama** | Model Architecture · Training · Data Preprocessing |
+| **Ahmed Hassan Mohamed** | Hyperparameter Tuning · Feature Engineering · Model Deployment |
+| **Yara Ahmed Mohamed Abdelall** | Data Augmentation · Model Testing · Frontend Integration |
+| **Salwa Wael Mohammed Elkordy** | Dataset Preparation · Model Evaluation · Performance Analysis |
 
 ---
 
