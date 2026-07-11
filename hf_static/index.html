@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Real-Time Sign Language Recognition</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">✋</span>
+      <div>
+        <h1>Real-Time Sign Language Recognition</h1>
+        <p class="subtitle">ASL fingerspelling &middot; runs 100% in your browser &middot; MediaPipe + MLP</p>
+      </div>
+    </div>
+    <div class="status">
+      <span id="statusDot" class="dot dot-off"></span>
+      <span id="statusText">Loading model…</span>
+    </div>
+  </header>
+
+  <main class="grid">
+    <section class="panel camera-panel">
+      <div class="video-wrap">
+        <video id="video" playsinline muted></video>
+        <canvas id="overlay"></canvas>
+        <div id="videoHint" class="video-hint">Loading the hand model…</div>
+      </div>
+
+      <div class="readout">
+        <div class="letter-box">
+          <div id="letter" class="letter">–</div>
+          <div id="sourceTag" class="source-tag">idle</div>
+        </div>
+        <div class="meters">
+          <div class="meter">
+            <div class="meter-label"><span>Confidence</span><span id="confVal">0%</span></div>
+            <div class="meter-track"><div id="confBar" class="meter-fill"></div></div>
+          </div>
+          <div class="meter">
+            <div class="meter-label"><span>Stability</span><span id="stabVal">0%</span></div>
+            <div class="meter-track"><div id="stabBar" class="meter-fill meter-fill-gold"></div></div>
+          </div>
+          <div class="stat-row">
+            <span>FPS <b id="fps">0</b></span>
+            <span>Hand <b id="hand">no</b></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel side-panel">
+      <div class="word-card">
+        <div class="word-label">Translated text</div>
+        <div id="word" class="word"></div>
+      </div>
+
+      <div class="controls">
+        <button id="startBtn" class="btn btn-primary" disabled>Start camera</button>
+        <button id="stopBtn" class="btn" disabled>Stop</button>
+        <div class="btn-row">
+          <button id="spaceBtn" class="btn btn-ghost" disabled>Space</button>
+          <button id="backBtn" class="btn btn-ghost" disabled>⌫ Backspace</button>
+          <button id="clearBtn" class="btn btn-ghost" disabled>Clear</button>
+        </div>
+      </div>
+
+      <div class="settings">
+        <p class="hint">Hold a letter steady for ~1s to type it. Release your hand
+          before repeating the same letter. This model recognizes the
+          <b>24 static letters</b> (the motion letters <b>J</b> and <b>Z</b> are
+          not included). Everything runs locally — no video leaves your device.</p>
+      </div>
+
+      <div class="legend">
+        <span class="legend-item"><span class="chip chip-green"></span> hand detected</span>
+        <span class="legend-item"><span class="chip chip-gold"></span> hold steady to type</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    DEPI &middot; Microsoft Machine Learning Program — Graduation Project
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
