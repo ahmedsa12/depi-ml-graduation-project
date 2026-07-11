@@ -12,15 +12,15 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white" alt="Python">
-  <img src="https://img.shields.io/badge/TensorFlow-2.16%2B-FF6F00?logo=tensorflow&logoColor=white" alt="TensorFlow">
-  <img src="https://img.shields.io/badge/MediaPipe-0.10.35-0097A7?logo=google&logoColor=white" alt="MediaPipe">
-  <img src="https://img.shields.io/badge/scikit--learn-1.3%2B-F7931E?logo=scikitlearn&logoColor=white" alt="scikit-learn">
-  <img src="https://img.shields.io/badge/NumPy-1.26%2B-013243?logo=numpy&logoColor=white" alt="NumPy">
-  <img src="https://img.shields.io/badge/OpenCV-4.9%2B-5C3EE8?logo=opencv&logoColor=white" alt="OpenCV">
-  <img src="https://img.shields.io/badge/FastAPI-0.111%2B-009688?logo=fastapi&logoColor=white" alt="FastAPI">
-  <img src="https://img.shields.io/badge/Uvicorn-0.30%2B-4B8BBE?logo=uvicorn&logoColor=white" alt="Uvicorn">
-  <img src="https://img.shields.io/badge/License-MIT-3DA639" alt="License">
+  <a href="https://www.python.org"><img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white" alt="Python"></a>
+  <a href="https://www.tensorflow.org"><img src="https://img.shields.io/badge/TensorFlow-2.16%2B-FF6F00?logo=tensorflow&logoColor=white" alt="TensorFlow"></a>
+  <a href="https://ai.google.dev/edge/mediapipe"><img src="https://img.shields.io/badge/MediaPipe-0.10.35-0097A7?logo=google&logoColor=white" alt="MediaPipe"></a>
+  <a href="https://scikit-learn.org"><img src="https://img.shields.io/badge/scikit--learn-1.3%2B-F7931E?logo=scikitlearn&logoColor=white" alt="scikit-learn"></a>
+  <a href="https://numpy.org"><img src="https://img.shields.io/badge/NumPy-1.26%2B-013243?logo=numpy&logoColor=white" alt="NumPy"></a>
+  <a href="https://opencv.org"><img src="https://img.shields.io/badge/OpenCV-4.9%2B-5C3EE8?logo=opencv&logoColor=white" alt="OpenCV"></a>
+  <a href="https://fastapi.tiangolo.com"><img src="https://img.shields.io/badge/FastAPI-0.111%2B-009688?logo=fastapi&logoColor=white" alt="FastAPI"></a>
+  <a href="https://www.uvicorn.org"><img src="https://img.shields.io/badge/Uvicorn-0.30%2B-4B8BBE?logo=uvicorn&logoColor=white" alt="Uvicorn"></a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-3DA639" alt="License"></a>
 </p>
 
 > **🚀 Try it now (Beta):** <https://huggingface.co/spaces/salam0z/Real-Time-Sign-Language-Recognition>
