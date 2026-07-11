@@ -43,18 +43,18 @@
 
 ---
 
-##  Overview
+## Overview
 
 Instead of classifying raw pixels, the system detects **21 hand landmarks** with MediaPipe, turns
 them into a compact **63-D geometric feature vector**, normalises it to be **translation- and
 scale-invariant**, and classifies it with a small **MLP**. This makes the model tiny, fast on CPU,
 and robust to background, lighting, camera, and skin tone.
 
--  **98.74% accuracy** · **0.986 macro F1** on 11,074 held-out samples.
--  Recognises the **24 static ASL letters** (`A–I, K–Y`).
--  **Real-time** on CPU; a confidence gate + temporal smoothing keep predictions stable.
--  **Deploys anywhere** — Colab notebook, FastAPI API, and a **fully in-browser** static app.
--  **Private** — the browser version runs entirely on-device; the webcam never leaves the machine.
+- **98.74% accuracy** · **0.986 macro F1** on 11,074 held-out samples.
+- Recognises the **24 static ASL letters** (`A–I, K–Y`).
+- **Real-time** on CPU; a confidence gate + temporal smoothing keep predictions stable.
+- **Deploys anywhere** — Colab notebook, FastAPI API, and a **fully in-browser** static app.
+- **Private** — the browser version runs entirely on-device; the webcam never leaves the machine.
 
 > The motion letters **J** and **Z** require movement and are intentionally out of scope; every
 > prediction is a stable single-frame pose.
@@ -170,7 +170,7 @@ python -m http.server 5500
 
 ---
 
-## 🔌 API Documentation
+## API Documentation
 
 **Base URL (dev):** `http://localhost:8000` · **Interactive docs:** `/docs` (Swagger) · `/redoc`
 Static-only: a single MLP classifies the 24 letters. State (smoothing window + current word) is kept
