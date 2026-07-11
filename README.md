@@ -1,4 +1,4 @@
-<h1 align="center">🖐️ Real-Time Sign Language Recognition</h1>
+<h1 align="center">Real-Time Sign Language Recognition</h1>
 
 <p align="center">
   Real-time <b>American Sign Language (ASL) fingerspelling</b> recognition from a webcam —
@@ -23,12 +23,12 @@
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-3DA639" alt="License"></a>
 </p>
 
-> **🚀 Try it now (Beta):** <https://huggingface.co/spaces/salam0z/Real-Time-Sign-Language-Recognition>
+> **Try it now (Beta):** <https://huggingface.co/spaces/salam0z/Real-Time-Sign-Language-Recognition>
 > — open the page, click **Start camera**, and sign. Everything runs on your device; no video is uploaded.
 
 ---
 
-## 📑 Table of Contents
+## Table of Contents
 - [Overview](#-overview)
 - [Tech Stack](#-tech-stack)
 - [Architecture](#-architecture)
@@ -43,25 +43,25 @@
 
 ---
 
-## ✨ Overview
+##  Overview
 
 Instead of classifying raw pixels, the system detects **21 hand landmarks** with MediaPipe, turns
 them into a compact **63-D geometric feature vector**, normalises it to be **translation- and
 scale-invariant**, and classifies it with a small **MLP**. This makes the model tiny, fast on CPU,
 and robust to background, lighting, camera, and skin tone.
 
-- 🎯 **98.74% accuracy** · **0.986 macro F1** on 11,074 held-out samples.
-- 🔤 Recognises the **24 static ASL letters** (`A–I, K–Y`).
-- ⚡ **Real-time** on CPU; a confidence gate + temporal smoothing keep predictions stable.
-- 🌐 **Deploys anywhere** — Colab notebook, FastAPI API, and a **fully in-browser** static app.
-- 🔒 **Private** — the browser version runs entirely on-device; the webcam never leaves the machine.
+-  **98.74% accuracy** · **0.986 macro F1** on 11,074 held-out samples.
+-  Recognises the **24 static ASL letters** (`A–I, K–Y`).
+-  **Real-time** on CPU; a confidence gate + temporal smoothing keep predictions stable.
+-  **Deploys anywhere** — Colab notebook, FastAPI API, and a **fully in-browser** static app.
+-  **Private** — the browser version runs entirely on-device; the webcam never leaves the machine.
 
 > The motion letters **J** and **Z** require movement and are intentionally out of scope; every
 > prediction is a stable single-frame pose.
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 
 | Category | Technology | Version |
 |---|---|---|
@@ -89,7 +89,7 @@ pip install -r backend/requirements.txt
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
  Webcam frame
@@ -109,7 +109,7 @@ pip install -r backend/requirements.txt
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 .
@@ -133,7 +133,7 @@ pip install -r backend/requirements.txt
 
 ---
 
-## 🧠 Model & Classes
+## Model & Classes
 
 - **Model:** a single MLP — `63 → 256 → 128 → 64 → 24` with BatchNorm, ReLU, Dropout, and a Softmax head.
 - **Static letters (24):** `A B C D E F G H I K L M N O P Q R S T U V W X Y`
@@ -143,7 +143,7 @@ pip install -r backend/requirements.txt
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1) Try the live demo (nothing to install)
 Open **<https://huggingface.co/spaces/salam0z/Real-Time-Sign-Language-Recognition>** → **Start camera**.
@@ -259,7 +259,7 @@ Full reference: [`docs/API.md`](docs/API.md).
 
 ---
 
-## 📊 Results
+## Results
 
 Evaluated on a stratified held-out test set of **11,074** landmark samples.
 
@@ -276,7 +276,7 @@ closed-fist poses). Figures and the full per-class report are in [`documentation
 
 ---
 
-## 👥 Team
+## Team
 
 | Member | Role |
 |---|---|
@@ -289,7 +289,7 @@ closed-fist poses). Figures and the full per-class report are in [`documentation
 
 ---
 
-## ⚠️ Limitations
+## Limitations
 
 - Scope is the **static ASL alphabet** (24 letters), not `J`/`Z` motion or full sign-language grammar.
 - The dataset has limited signer diversity, so real-world accuracy for new users/cameras may be lower.
@@ -297,7 +297,7 @@ closed-fist poses). Figures and the full per-class report are in [`documentation
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 DEPI (Digital Egypt Pioneers Initiative) & the Microsoft Machine Learning Program · EYouth ·
 the Kaggle *ASL Alphabet* dataset · Google MediaPipe · Hugging Face.
